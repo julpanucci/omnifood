@@ -2,13 +2,17 @@
 
 <html lang="en">
   <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="vendors/css/normalize.css" />
     <link rel="stylesheet" href="vendors/css/grid.css" />
     <link rel="stylesheet" href="resources/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="resources/css/queries.css" type="text/css" />
     <link
       href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="resources/css/animate.css"/>
     <title>Omnifood</title>
   </head>
 
@@ -21,12 +25,18 @@
             alt="Omnifood logo"
             class="logo"
           />
+          <img
+          src="resources/css/img/logo.png"
+          alt="Omnifood logo"
+          class="logo-black"
+        />
           <ul class="main-nav">
-            <li><a href="#">Food Delivery</a></li>
-            <li><a href="#">How it works</a></li>
-            <li><a href="#">Our Cities</a></li>
-            <li><a href="#">Sign up</a></li>
+            <li><a href="#features">Food Delivery</a></li>
+            <li><a href="#works">How it works</a></li>
+            <li><a href="#cities">Our Cities</a></li>
+            <li><a href="#register">Sign up</a></li>
           </ul>
+          <a class="mobile-nav-icon"><ion-icon name="menu"></ion-icon></a>
         </div>
       </nav>
       <div class="hero-text-box">
@@ -34,12 +44,12 @@
           Goodbye junk food.<br />
           Hello super healthy meals
         </h1>
-        <a class="btn btn-full" href="#">I'm hungry</a>
-        <a class="btn btn-ghost" href="#">Show me more</a>
+        <a class="btn btn-full js--scroll-to-plans" href="#">I'm hungry</a>
+        <a class="btn btn-ghost js--scroll-to-start" href="#">Show me more</a>
       </div>
     </header>
 
-    <section class="section-features">
+    <section class="section-features js--section-features" id="features">
       <div class="row">
         <h2>Get food fast &mdash; not fast food</h2>
         <p class="long-copy">
@@ -48,7 +58,7 @@
           we’re really good at it, we promise!
         </p>
       </div>
-      <div class="row">
+      <div class="row js--wp-1">
         <div class="col span-1-of-4 box">
           <ion-icon class="icon-big" name="infinite"></ion-icon>
           <h3>Up to 365 days/year</h3>
@@ -88,7 +98,7 @@
       </div>
     </section>
 
-    <section class="section-meals clearfix">
+    <section class="section-meals clearfix" id="meals">
       <ul class="meals-showcase ">
         <li>
           <figure class="meal-photo">
@@ -135,12 +145,12 @@
       </ul>
     </section>
 
-    <section class="section-steps">
+    <section class="section-steps" id="works">
       <div class="row">
         <h2>How it works &mdash; Simple as 1, 2, 3</h2>
       </div>
       <div class="row">
-        <div class="col span-1-of-2 steps-box">
+        <div class="col span-1-of-2 steps-box js--wp-3">
           <img
             class="app-screen"
             src="resources/css/img/app-iPhone.png"
@@ -170,11 +180,11 @@
       </div>
     </section>
 
-    <section class="section-cities">
+    <section class="section-cities" id="cities">
       <div class="row">
         <h2>We're Currently in these cities</h2>
       </div>
-      <div class="row">
+      <div class="row js--wp-2">
         <div class="col span-1-of-4 box">
           <img src="resources/css/img/lisbon-3.jpg">
           <h3>Lisbon</h3>
@@ -264,6 +274,171 @@
       </div>
     </section>
 
+    <section class="section-plans js--section-plans">
+      <div class="row">
+        <h2>Start eating healthy today</h2>
+      </div>
+      <div class="row">
+        <div class="col span-1-of-3">
+          <div class="plan-box js--wp-4">
+            <div>
+              <h3>Premium</h3>
+              <p class="plan-price">$399 <span>/ month</span></p>
+              <p class="plan-price-meal">That's only $13.30 per meal</p>
+            </div>
+            <div>
+              <ul>
+                <li><ion-icon class="icon-small"  name="checkmark"></ion-icon>1 meal every day</li>
+                <li><ion-icon class="icon-small"  name="checkmark"></ion-icon>Order 24/7</li>
+                <li><ion-icon class="icon-small"  name="checkmark"></ion-icon>Access to newest creations</li>
+                <li><ion-icon class="icon-small"  name="checkmark"></ion-icon>Free delivery</li>
+              </ul>
+            </div>
+            <div>
+              <a href="#register" class="btn btn-full">Sign up now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col span-1-of-3">
+          <div class="plan-box">
+            <div>
+              <h3>Pro</h3>
+              <p class="plan-price">$149 <span>/ month</span></p>
+              <p class="plan-price-meal">That's only $14.90 per meal</p>
+            </div>
+            <div>
+              <ul>
+                <li><ion-icon class="icon-small" name="checkmark"></ion-icon>1 meal 10 days/month</li>
+                <li><ion-icon class="icon-small"  name="checkmark"></ion-icon>Order 24/7</li>
+                <li><ion-icon class="icon-small"  name="checkmark"></ion-icon>Access to newest creations</li>
+                <li><ion-icon class="icon-small"  name="checkmark"></ion-icon>Free delivery</li>
+              </ul>
+            </div>
+            <div>
+              <a href="#" class="btn btn-ghost">Sign up now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col span-1-of-3">
+          <div class="plan-box">
+            <div>
+              <h3>Starter</h3>
+              <p class="plan-price">$19 <span>per meal</span></p>
+              <p class="plan-price-meal">&nbsp</p>
+            </div>
+            <div>
+              <ul>
+                <li><ion-icon class="icon-small"  name="checkmark"></ion-icon>1 meal every day</li>
+                <li><ion-icon class="icon-small"  name="checkmark"></ion-icon>Order from 8 am to 12 pm</li>
+                <li><ion-icon class="icon-small"  name="close"></ion-icon>Access to newest creations</li>
+                <li><ion-icon class="icon-small"  name="checkmark"></ion-icon>Free delivery</li>
+              </ul>
+            </div>
+            <div>
+              <a href="#" class="btn btn-ghost">Sign up now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-form" id="register">
+      <div class="row">
+        <h2>We're happy to hear from you</h2>
+      </div>
+
+      <div class="row">
+        <form method="post" action="#" class="contact-form">
+          <div class="row">
+            <div class="col span-1-of-3">
+              <label for="name">Name</label>
+            </div>
+            <div class="col span-2-of-3">
+              <input type="text" name="name" id="name" placeholder="Your name" required>
+            </div>
+          </div>
+          <div class="row">
+              <div class="col span-1-of-3">
+                <label for="email">Email</label>
+              </div>
+              <div class="col span-2-of-3">
+                <input type="email" name="email" id="email" placeholder="Your email" required>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col span-1-of-3">
+                  <label for="find-us">How did you find us?</label>
+                </div>
+                <div class="col span-2-of-3">
+                  <select name="find-us" id="find-us">
+                    <option value="friends">Friends</option>
+                    <option value="search" selected>Search Engine</option>
+                    <option value="ad">Advertisement</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row">
+                  <div class="col span-1-of-3">
+                    <label for="news">Newsletter?</label>
+                  </div>
+                  <div class="col span-2-of-3">
+                    <input type="checkbox" name="news" id="news" checked required> Yes, please
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-3">
+                      <label for="">Drop us a line</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                      <textarea name="message" placeholder="Your message"></textarea>
+                    </div>
+                  </div>
+                  <div class="row">
+                      <div class="col span-1-of-3">
+                        <label for="">&nbsp;</label>
+                      </div>
+                      <div class="col span-2-of-3">
+                        <input type="submit" value="Send it!">
+                      </div>
+                    </div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="row">
+        <div class="col span-1-of-2">
+          <ul class="footer-nav">
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">iOS App</a></li>
+            <li><a href="#">Android App</a></li>
+          </ul>
+        </div>
+        <div class="col span-1-of-2">
+            <ul class="social-links">
+              <li><a href="#"><ion-icon class="icon-small" name="logo-facebook"></ion-icon></a></li>
+              <li><a href="#"><ion-icon class="icon-small" name="logo-twitter"></ion-icon></a></li>
+              <li><a href="#"><ion-icon class="icon-small" name="logo-googleplus"></ion-icon></a></li>
+              <li><a href="#"><ion-icon class="icon-small" name="logo-instagram"></ion-icon></a></li>
+            </ul>
+          </div>
+      </div>
+      <div class="row">
+        <p>
+          Copyright &copy; 2019 by Omnifood. All rights reserved.
+        </p>
+      </div>
+    </footer>
+    <script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="./script.js"></script>
+    <script src="jquery.waypoints.min.js"></script>
   </body>
 </html>
